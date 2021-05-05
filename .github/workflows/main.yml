@@ -10,7 +10,7 @@ jobs:
           node-version: '12'
       - run: npm install
       - name: run doc-validator
-        uses: amitmiran137/doc-validator-action@v1.1
+        uses: amitmiran137/doc-validator-action@v1.2
         with:
           markdown: './resources/bad_example'
       - name: fail step if parse was successful
