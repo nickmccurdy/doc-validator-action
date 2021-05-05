@@ -8,7 +8,7 @@ async function run()
   try {
     const markdown = core.getInput('markdown');
     const content = fs.readFileSync(markdown, "utf8");
-    const result = await parse(content)
+    const result = parse(content)
     if (result === "") {
       core.setOutput("result", 'success');
     } else {
