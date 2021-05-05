@@ -6,7 +6,7 @@ jobs:
     name: A job to test doc-validator
     steps:
       - name: run doc-validator
-        uses: amitmiran137/doc-validator-action@v1
+        uses: amitmiran137/doc-validator-action@v1.1
         with:
           markdown: './resources/bad_example'
       - name: fail step if parse was successful
