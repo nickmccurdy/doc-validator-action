@@ -1,3 +1,4 @@
+exports.__esModule = true;
 const core = require('@actions/core');
 const fs = require("fs");
 const { parse } = require('doc-validator');
