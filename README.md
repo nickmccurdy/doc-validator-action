@@ -16,6 +16,6 @@ result can be only 'success' or the action will fail
 
 ## Example usage
 
-uses: actions/doc-validator-action@v1.0.0
+uses: amitmiran137/doc-validator-action@v1
 with:
   markdown: './README.md'
