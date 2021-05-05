@@ -9,4 +9,4 @@ outputs:
     description: 'return success '
 runs:
   using: 'node12'
-  main: 'index.js --experimental-modules''
+  main: 'index.js --experimental-modules'
