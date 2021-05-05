@@ -6,7 +6,7 @@ const parse = require('doc-validator');
 try {
   const markdown = core.getInput('markdown');
   const content = fs.readFileSync(markdown, "utf8");
-  const result= parse(content)
+  const result= await parse(content)
   if (result === "") {
     core.setOutput("result", 'success');
   }
