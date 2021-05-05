@@ -3,16 +3,20 @@ const github = require('@actions/github');
 const fs = require("fs");
 const { parse } = require('doc-validator');
 
-try {
-  const markdown = core.getInput('markdown');
-  const content = fs.readFileSync(markdown, "utf8");
-  const result= await parse(content)
-  if (result === "") {
-    core.setOutput("result", 'success');
+async function run()
+{
+  try {
+    const markdown = core.getInput('markdown');
+    const content = fs.readFileSync(markdown, "utf8");
+    const result = await parse(content)
+    if (result === "") {
+      core.setOutput("result", 'success');
+    } else {
+      core.setFailed(result);
+    }
+  } catch (error) {
+    core.setFailed(error.message);
   }
-  else{
-    core.setFailed(result);
-  }
-} catch (error) {
-  core.setFailed(error.message);
 }
+
+run()

@@ -74767,21 +74767,25 @@ var __webpack_exports__ = {};
 const core = __nccwpck_require__(5127);
 const github = __nccwpck_require__(3134);
 const fs = __nccwpck_require__(5747);
-const parse = __nccwpck_require__(2729);
+const { parse } = __nccwpck_require__(2729);
 
-try {
-  const markdown = core.getInput('markdown');
-  const content = fs.readFileSync(markdown, "utf8");
-  const result= parse(content)
-  if (result === "") {
-    core.setOutput("result", 'success');
+async function run()
+{
+  try {
+    const markdown = core.getInput('markdown');
+    const content = fs.readFileSync(markdown, "utf8");
+    const result = await parse(content)
+    if (result === "") {
+      core.setOutput("result", 'success');
+    } else {
+      core.setFailed(result);
+    }
+  } catch (error) {
+    core.setFailed(error.message);
   }
-  else{
-    core.setFailed(result);
-  }
-} catch (error) {
-  core.setFailed(error.message);
 }
+
+run()
 
 })();
 
