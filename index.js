@@ -17,5 +17,3 @@ async function run()
     core.setFailed(error.message);
   }
 }
-
-require('esm')(module)(run()
