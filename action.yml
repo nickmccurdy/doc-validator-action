@@ -6,7 +6,7 @@ inputs:
     required: true
 outputs:
   result:
-    description: 'return success '
+    description: 'return success'
 runs:
   using: 'node12'
-  main: 'index.js --experimental-modules'
+  main: 'dist/index.js'
