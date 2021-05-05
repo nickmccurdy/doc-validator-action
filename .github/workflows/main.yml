@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: runAction
-        uses: actions/doc-validator-action@v1
+        uses: actions/doc-validator@v1
         with:
           markdown: './resources/bad_example'
       # Use the output from the `hello` step
