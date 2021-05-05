@@ -5,7 +5,7 @@ inputs:
     description: 'the markdown file to validate'
     required: true
 outputs:
-  result: # id of output
+  result:
     description: 'return success '
 runs:
   using: 'node12'

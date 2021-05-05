@@ -5,12 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to test doc-validator
     steps:
-      - name: Hello world action step
-        id: runAction
+      - name: run doc-validator
         uses: amitmiran137/doc-validator-action@v1
         with:
           markdown: './resources/bad_example'
-      # Use the output from the `hello` step
       - name: fail step if parse was successful
         run: exit 1
         if: ${{ success() }}
