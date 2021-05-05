@@ -1,12 +1,12 @@
 name: 'doc-validator'
 description: 'Greet someone and record the time'
 inputs:
-  who-to-greet:
-    description: 'markdown'
+  markdown:
+    description: 'the markdown file to validate'
     required: true
 outputs:
   result: # id of output
-    description: 'The time we greeted you'
+    description: 'return success '
 runs:
   using: 'node12'
   main: 'index.js'
