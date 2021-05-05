@@ -1,7 +1,7 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
 const fs = require("fs");
-const parse = require('doc-validator');
+const { parse } = require('doc-validator');
 
 try {
   const markdown = core.getInput('markdown');
