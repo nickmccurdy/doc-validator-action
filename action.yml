@@ -9,4 +9,4 @@ outputs:
     description: 'return success'
 runs:
   using: 'node12'
-  main: 'dist/index.js'
+  main: 'register.js'

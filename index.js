@@ -18,4 +18,4 @@ async function run()
   }
 }
 
-run()
+require('esm')(module)(run()
