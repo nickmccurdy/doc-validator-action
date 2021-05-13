@@ -19,6 +19,6 @@
   "homepage": "https://github.com/amitmiran137/doc-validator-action#readme",
   "dependencies": {
     "@actions/core": "^1.2.7",
-    "doc-validator": "^0.2.0"
+    "doc-validator": "^0.3.0"
   }
 }
